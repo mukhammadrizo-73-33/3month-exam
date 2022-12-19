@@ -1,4 +1,10 @@
-
+let body = document.querySelector('body');
+let header = document.querySelector('h1');
+let mavzu_button = document.getElementById('background');
+mavzu_button.addEventListener('click', function (evt) {
+    body.classList.toggle('dark')
+    header.classList.toggle('dark')
+})
 
 let result = document.getElementById("result");
 let input = document.getElementById("input");
@@ -24,6 +30,22 @@ button.addEventListener("click", (e) => {
    // }
 })
 
+
+// 2-topshiriq
+function difference(e){
+   e.preventDefault();
+
+
+   let first_date=new Date(document.getElementById('first_date').value)
+   let second_date=new Date(document.getElementById('second_date').value) 
+   let day=(first_date.getTime()-second_date.getTime())/1000/60/24/60;
+
+
+  let difference=document.getElementById('difference');
+  let x=`${day} day difference`;
+  difference.innerHTML=x;
+
+}
 
 // 3-topshiriq
 
@@ -129,10 +151,11 @@ let result6 = document.getElementById("result6");
 let input6 = document.getElementById("input6");
 
 
-input6.addEventListener("change", (e) => {
+input6.addEventListener("input", (e) => {
    e.preventDefault();
    input6.value = input6.value.toUpperCase()
 
+   
    // return result6.textContent=input6
 })
 
