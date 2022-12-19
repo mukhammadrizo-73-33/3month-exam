@@ -1,7 +1,7 @@
 let body = document.querySelector('body');
 let header = document.querySelector('h1');
 let temabutton = document.getElementById('background');
-mavzu_button.addEventListener('click', function (evt) {
+temabutton.addEventListener('click', function (evt) {
     body.classList.toggle('dark')
     header.classList.toggle('dark')
 })
